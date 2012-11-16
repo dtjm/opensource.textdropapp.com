@@ -1,0 +1,1 @@
+Due to the sunsetting of the Dropbox v0 API, TextDrop V2 (the free version) was taken offline and open-sourced.

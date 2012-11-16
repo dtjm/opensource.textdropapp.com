@@ -1,0 +1,29 @@
+#textarea-container
+  %textarea.loading(disabled="disabled") =&gt; Loading...
+  %pre#textarea-shadow
+
+:javascript
+  
+    var finishedLoadingCallback;
+    finishedLoadingCallback = function(view) {
+      return function(response) {
+        return view.didFinishLoading(response);
+      };
+    };
+    $(document).ready(function() {
+      var doc, view;
+      doc = new TextDocument();
+      doc.set({
+        path: "#{@cwd}",
+        filename: "#{@filename}",
+        isLoading: true
+      });
+      view = new TextDocumentView({
+        el: $("body"),
+        model: doc
+      });
+      $("textarea").load(this.URL, null, finishedLoadingCallback(view));
+      return $(window).click(function() {
+        return $("textarea").focus();
+      });
+    });

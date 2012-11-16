@@ -1,0 +1,71 @@
+GEM
+  remote: http://gems.rubyforge.org/
+  remote: http://gems.github.com/
+  specs:
+    addressable (2.2.8)
+    childprocess (0.3.2)
+      ffi (~> 1.0.6)
+    diff-lcs (1.1.3)
+    dropbox (1.3.0)
+      json (>= 1.2.0)
+      multipart-post (>= 1.1.0)
+      oauth (>= 0.3.6)
+    emk-sinatra-url-for (0.2.1)
+      sinatra (>= 0.9.1.1)
+    ffi (1.0.11)
+    haml (3.1.4)
+    htmlentities (4.3.1)
+    jasmine (1.1.2)
+      jasmine-core (>= 1.1.0)
+      rack (>= 1.1)
+      rspec (>= 1.3.1)
+      selenium-webdriver (>= 0.1.3)
+    jasmine-core (1.1.0)
+    json (1.7.0)
+    libwebsocket (0.1.3)
+      addressable
+    multi_json (1.3.4)
+    multipart-post (1.1.5)
+    oauth (0.4.6)
+    rack (1.4.1)
+    rack-protection (1.2.0)
+      rack
+    rspec (2.0.0)
+      rspec-core (= 2.0.0)
+      rspec-expectations (= 2.0.0)
+      rspec-mocks (= 2.0.0)
+    rspec-core (2.0.0)
+    rspec-expectations (2.0.0)
+      diff-lcs (>= 1.1.2)
+    rspec-mocks (2.0.0)
+      rspec-core (= 2.0.0)
+      rspec-expectations (= 2.0.0)
+    rubyzip (0.9.8)
+    sass (3.1.17)
+    selenium-webdriver (2.21.2)
+      childprocess (>= 0.2.5)
+      ffi (~> 1.0)
+      libwebsocket (~> 0.1.3)
+      multi_json (~> 1.0)
+      rubyzip
+    sinatra (1.3.2)
+      rack (>= 1.3.6, ~> 1.3)
+      rack-protection (~> 1.2)
+      tilt (>= 1.3.3, ~> 1.3)
+    tilt (1.3.3)
+    unicode (0.4.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  dropbox
+  emk-sinatra-url-for
+  haml
+  htmlentities
+  jasmine
+  json
+  rspec-core (= 2.0.0)
+  sass
+  sinatra
+  unicode

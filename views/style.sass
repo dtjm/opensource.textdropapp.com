@@ -1,0 +1,188 @@
+$fontSize10: 77%
+$fontSize14: 108%
+$fontSize18: 138.5%
+$fontSize36: 277%
+.clear
+  clear: both
+
+.header-view
+  background: #eee
+  -webkit-box-shadow: 0 2px 8px #444
+  -moz-box-shadow: 0 2px 8px #444
+  position: fixed
+  width: 100%
+
+  .primary-button-bar
+    float: left
+    margin: 10px 20px
+
+  .secondary-button-bar, .preference-button-bar
+    float: right
+    margin: 10px 20px
+    padding-top: 4px
+
+    a
+      float: right
+
+    .ui-button-text
+      font-size: $fontSize10
+      padding: 3px 8px 5px
+
+  .filename-label, .path-label
+    float: left
+    font-size: $fontSize18
+    margin-top: 15px
+
+  #status
+    color: green
+    padding-top: 5px
+
+#footer
+  width: 100%
+  #footer-content
+    background: white
+    bottom:     0
+    font-size:  $fontSize10
+    opacity:    0.85
+    padding:    5px 20px
+    position:   fixed
+    right:      0
+
+    img
+      position: relative
+      top: 4px
+
+#about
+  padding: 20px
+  text-align: left
+
+  img
+    float: left
+    margin-right: 10px
+
+  p
+    margin: 1em 0
+
+
+#root-view
+  padding: 70px 25px 20px 20px
+
+#copy
+  padding: 0 25px
+  font-family: monospace
+  font-size: $fontSize36
+
+.text-document-view
+  textarea, #textarea-shadow
+    border: none
+    font-family: 'Inconsolata', monospace
+    font-size: $fontSize18
+    resize: none
+    outline: none
+    width: 100%
+    &.loading
+      font-size: $fontSize36
+  #textarea-shadow
+    padding:    0
+    position:   absolute
+    left:       0
+    top:        0
+    visibility: hidden
+    // Quick hack to make the shadow the same width as the
+    // textarea
+    width:      92%
+
+.dropbox-browser
+  list-style: none
+  margin-left: 0
+  margin-top:  0.5em
+
+  li
+    clear: both
+    float: left
+    font-size: 13px
+
+    span.sprite
+      display: inline-block
+      margin-right: 4px
+      position: relative
+      top: 2px
+    a
+      text-decoration: none
+    &.disabled
+      color: #888
+
+.ui-dialog
+
+  position: fixed
+
+  .ui-dialog-buttonpane
+    background-image: url(/css/themes/aristo/images/the_gradient.gif)
+    background-position: center
+    min-height: 1em
+    padding: 5px 10px
+
+    ul
+      font-size: $fontSize10
+      list-style: none
+      margin-left: 0
+
+      li
+        float: left
+
+  .ui-dialog-title
+    font-size: 13px
+    color: black
+
+  .ui-dialog-titlebar
+    padding: .5em 1em .3em
+
+.ui-widget-overlay
+  opacity: 0.5
+
+.ui-buttonset .ui-button
+  margin-right: -1px
+
+.ui-button-text-icon-primary .ui-button-text,
+.ui-button-text-icons .ui-button-text
+  padding-right: .75em
+
+.save-dialog
+  label
+    clear: left
+    font-size: 13px
+    float: left
+    padding-right: 10px
+    padding-top: 3px
+    width: 54px
+
+  input
+    border-width: 0 0 1px 0
+    float: left
+    clear: right
+    padding-top: 3px
+  #directory
+    clear: right
+    float: left
+    padding: 4px 0 0 1px
+    ul
+      font-size: $fontSize10
+      list-style: none
+      margin-left: 0
+      li
+        float: left
+
+#autosave-fieldset
+  float: left
+  margin-right: 20px
+  margin-top: 4px
+  input
+    margin-right: 4px
+
+#beta
+  position: fixed
+  bottom: 5px
+  left: 10px
+  font-weight: bold
+  a
+    color: #900

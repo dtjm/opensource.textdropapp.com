@@ -1,0 +1,24 @@
+#copy
+  %p 
+    You have been logged out
+    %br/ 
+    of TextDrop, but 
+    %a(href="http://www.dropbox.com/logout?cont=#{URI.escape(url_for("/", :full), ":")}") 
+      log out of
+      %br/
+      Dropbox
+      to be safe
+    %br/
+    %br/
+    Or, 
+    %a(href="/login") log back in
+    
+
+:javascript
+  //var date = new Date();
+  //document.cookie = "rack.session=;expires=" + date.toGMTString() + "; path=/";
+
+    $(function(){
+      $("#menu ul.primary").buttonset().buttonset("disable");
+      $("#logout").button({disabled: true});
+    });

@@ -1,0 +1,64 @@
+#textarea-container
+  %textarea
+  %pre#textarea-shadow
+
+:javascript
+
+  function beginEditingPath() {
+    $("#path").attr("contenteditable", "true").focus().select();
+    return false;
+  }
+
+  $(function(){
+
+    $("#save").click(function(){
+
+
+      var text = $("textarea").val();
+        var path = $("#path").text();
+
+        if(text == "") {
+          $("textarea").text("Write in me!");
+          return false;
+        }
+
+        if(path == "" || path == "Untitled.txt" || path == "Give me a name!") {
+          $("#path").text("Give me a name!");
+          return false;
+        }
+
+        if(path.substr(-4) != ".txt") {
+          path += ".txt";
+          $("#path").text(path);
+        }
+
+        didBeginSaving();
+
+        $.post(
+          "/file/" + path,
+          {"file_contents": $("textarea").val()},
+            function(response){
+              didFinishSaving();
+                $("#status").show().text(response).delay(5000).fadeOut();
+            }
+        );
+
+        return false;
+    });
+
+
+    $("textarea").keydown(function(event){
+      checkTab(event);
+      autofitTextarea();
+    });
+
+      // Make clicks give the TEXTAREA focus
+      $(window).dblclick(function(){ $("textarea").focus() });
+
+      $("#path").click(beginEditingPath).dblclick(beginEditingPath);
+
+      $("#path").blur(function(){
+        $(this).removeAttr("contenteditable");
+      });
+
+  });
